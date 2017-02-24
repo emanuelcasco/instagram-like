@@ -14,7 +14,7 @@ page('/homepage', function (ctx, next) {
       url: 'http://materializecss.com/images/office.jpg',
       likes: 1024,
       liked: true,
-      createdAt: new Date()
+      createdAt: new Date('2017-02-24T23:12:00Z')
     },
     {
       user: {
@@ -23,9 +23,9 @@ page('/homepage', function (ctx, next) {
         avatar: 'http://materializecss.com/images/yuna.jpg'
       },
       url: 'http://materializecss.com/images/sample-1.jpg',
-      likes: 0,
+      likes: 1,
       liked: false,
-      createdAt: (new Date() - 1486076400)
+      createdAt: new Date()
     }
   ];
   main.empty().append(template(pictures));
