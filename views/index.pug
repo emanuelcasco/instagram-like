@@ -1,0 +1,31 @@
+html
+  head
+    title Emagram
+    link(href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet')
+    link(rel='stylesheet' href='fonts/font-awesome.min.css')
+    link(type='text/css' rel='stylesheet' href='css/app.css'  media='screen,projection')
+    link(rel="shortcut icon" href="apple-icon-60x60.png" type="image/x-icon")
+    link(rel="icon" href="apple-icon-60x60.png" type="image/x-icon")
+
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+
+  body
+    section#main-container
+    footer.site-footer
+      .container
+        .row
+          .col.s12.m3.l3.center-align
+            //
+              <a class='dropdown-button btn btn-flat' href='#' data-activates='dropdown1'>Idioma</a>
+              <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="#!">Español</a></li>
+              <li><a href="#!">Inglés</a></li>
+              </ul>
+          .col.s12.center-align
+            | © 2017 - Emanuel Casco
+    script(src='https://code.jquery.com/jquery-2.2.3.min.js', integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
+    script(type='text/javascript', src='js/app.js')
+  

@@ -1,0 +1,114 @@
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+$primary-color: #4090db;
+$secondary-color: #409fff;
+$facebook-color: #3b5998;
+
+body{
+  background-color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.main-container { margin: 20px auto; }
+
+.iphone{
+  padding-top: 50px;
+  max-width: 100%;
+}
+
+.card{
+  .avatar{
+    max-width: 30px;
+    border-radius: 50%;
+    float:left;
+    margin-right: 10px;
+    border: $primary-color solid 2px;
+  }
+
+  small.time { line-height: 30px; }
+
+  i { margin-right: 15px; }
+
+  .username {
+    color: $primary-color;
+    font-size: 0.8em;
+  }
+}
+
+.header{
+  background-color: #FFF;
+  margin-bottom: 10px;
+  .fa{ color: #333; }
+  .btn{ height: 100%; }
+  li a { color: $primary-color; }
+  #drop-user{width: 150px;}
+}
+
+.site-footer {
+  text-transform: uppercase;
+  font-size: 12px;
+  width:100%;
+  height: 20px;
+}
+
+.emagram{
+  font-family: 'Oleo Script', cursive;
+  font-size: 6em;
+  color: $primary-color !important;
+}
+
+.box {
+  background-color: white;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.signup-form {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.fa-heart{
+  font-size: 1.5em;
+  margin-left: 5px;
+  color: red;
+}
+
+.fa-heart-o{
+  font-size: 1.5em;
+  margin-left: 5px;
+}
+
+.card {
+  .fa-heart-o { display: block; }
+  .fa-heart { display: none; }
+}
+
+.card.liked {
+  .fa-heart-o { display: none; }
+  .fa-heart { display: inline;; }
+}
+
+.signup-form h2 {
+  color: #a5a7aa;
+  font-size: 1.2em;
+}
+
+.signup-form .btn.btn-fb {
+  background-color: $facebook-color;
+  font-size: .8em;
+  i { font-size: 1.2em; }
+}
+
+.btn.btn-fb {
+  background-color: $facebook-color;
+  color: #FFF !important;
+}
+
+.btn.btn-blue {
+  background-color: $primary-color;
+  &:hover { background-color: $secondary-color; }
+}
