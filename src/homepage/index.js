@@ -1,6 +1,6 @@
 var page = require('page');
 var template = require('./template');
-var request = require('superagent');
+var axios = require('axios');
 
 page('/', loadPictures,function (ctx, next) {
   $('title').html('Emagram - Inicio');
@@ -10,12 +10,12 @@ page('/', loadPictures,function (ctx, next) {
 });
 
 function loadPictures(ctx, next) {
-  request
+  axios
     .get('/api/pictures')
-    .end(function (err, res){
-      if(err) return console.log(err);
-
-      ctx.pictures = res.body;
+    .then(function (res){
+      ctx.pictures = res.data;
       next();
+    }).catch(function (err){
+      console.log(err);
     });
 }

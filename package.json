@@ -14,6 +14,7 @@
   "author": "Emanuel Casco",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.15.3",
     "express": "^4.14.1",
     "intl-relativeformat": "^1.3.0",
     "materialize-css": "^0.98.0",
@@ -33,8 +34,5 @@
     "gulp-sass": "^3.1.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
-  }, "scripts":{
-    "build": "gulp",
-    "start": "gulp build & gulp watch & node server.js"
   }
 }
