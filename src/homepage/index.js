@@ -9,17 +9,6 @@ page('/', asyncLoadPictures,function (ctx, next) {
   main.empty().append(template(ctx.pictures));
 });
 
-function loadPictures(ctx, next) {
-  axios
-    .get('/api/pictures')
-    .then(function (res){
-      ctx.pictures = res.data;
-      next();
-    }).catch(function (err){
-      console.log(err);
-    });
-};
-
 async function asyncLoadPictures(ctx, next) {
   try{
     var pictures = fetch('/api/pictures')
