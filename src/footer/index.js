@@ -10,16 +10,8 @@ var el = yo`
           ${translate.message('language')}
         </a>
         <ul id='dropdown1' class='dropdown-content'>
-          <li>
-            <a href="#" onclick=${changeLang.bind(null,'es')}>
-              ${translate.message('spanish')}
-            </a>
-          </li>
-          <li>
-            <a href="#" onclick=${changeLang.bind(null,'en-US')}>
-              ${translate.message('english')}
-            </a>
-          </li>
+          <li><a href="#" onclick=${changeLang.bind(null,'es')}>${translate.message('spanish')}</a></li>
+          <li><a href="#" onclick=${changeLang.bind(null,'en-US')}>${translate.message('english')}</a></li>
         </ul>
       </div>
       <div class="col s12 center-align">© 2017 - Emanuel Casco</div>
