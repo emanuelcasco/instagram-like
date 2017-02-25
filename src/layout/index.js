@@ -3,49 +3,8 @@ var translate = require('../translate').message;
 
 
 module.exports = function layout(content) {
-  return yo`<div>
-    <nav class="header">
-      <div class="nav-wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6 offset-m1">
-              <a href="#" class="brand-logo emagram">Emagram</a>
-            </div>
-            <div class="col s2 m6 push-s10 push-m10 hide-on-large-only">
-              <a class="btn btn-large btn-flat dropdown-button" data-activates="drop-user">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-              </a>
-              <ul id="drop-user" class="dropdown-content" data-beloworigin="true">
-                <li><a href="#!">${translate('my-profile')}</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="/signup">${translate('logout')}</a></li>
-              </ul>
-            </div>
-            <div class="col s2 m6 push-s10 push-m10 hide-on-med-and-down">
-              <ul>
-                <li><a href="#!">${translate('my-profile')}</a></li>
-                <li><a href="#!">two</a></li>
-                <li><a href="/signup">${translate('logout')}</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+  return yo`
     <div class="content">
       ${content}
-      <script>
-        $('.dropdown-button').dropdown({
-          inDuration: 300,
-          outDuration: 225,
-          constrainWidth: false, // Does not change width of dropdown to that of the activator
-          gutter: 0, // Spacing from edge
-          belowOrigin: true, // Displays dropdown below the button
-          alignment: 'left', // Displays dropdown with edge aligned to the left of button
-          stopPropagation: false // Stops event propagation
-          }
-        );
-      </script>
     </div>`;
 }
