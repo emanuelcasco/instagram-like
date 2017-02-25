@@ -1,7 +1,7 @@
 var yo = require('yo-yo');
 var translate = require('../translate');
 
-var el = yo`
+var elem = yo`
 <footer class="site-footer">
   <div class="container">
     <div class="row">
@@ -25,4 +25,4 @@ function changeLang(locale){
   return false;
 }
 
-document.body.appendChild(el);
+document.body.appendChild(elem);

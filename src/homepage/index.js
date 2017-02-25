@@ -1,21 +1,20 @@
 var page = require('page');
 var template = require('./template');
-var request = require('superagent');
+var axios = require('axios');
 
-page('/', loadPictures,function (ctx, next) {
+page('/', asyncLoadPictures,function (ctx, next) {
   $('title').html('Emagram - Inicio');
   var main = $('#main-container');
 
   main.empty().append(template(ctx.pictures));
 });
 
-function loadPictures(ctx, next) {
-  request
-    .get('/api/pictures')
-    .end(function (err, res){
-      if(err) return console.log(err);
-
-      ctx.pictures = res.body;
-      next();
-    });
+async function asyncLoadPictures(ctx, next) {
+  try{
+    var pictures = fetch('/api/pictures')
+    ctx.pictures = await pictures.then(res => res.json());
+    next();
+  } catch(err) {
+    return console.log(err);
+  }
 }

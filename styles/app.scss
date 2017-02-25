@@ -4,6 +4,11 @@ $primary-color: #4090db;
 $secondary-color: #409fff;
 $facebook-color: #3b5998;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-color: #fafafa;
   font-family: 'Montserrat', sans-serif;
@@ -37,6 +42,7 @@ body{
 }
 
 .header{
+  width: 100%;
   background-color: #FFF;
   margin-bottom: 10px;
   .fa{ color: #333; }

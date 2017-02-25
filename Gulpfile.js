@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
 gulp.task('styles', function () {
+  console.log('Compiling styles...')
   gulp
     .src('./styles/app.scss')
     .pipe(sass())
@@ -15,14 +16,16 @@ gulp.task('styles', function () {
 })
 
 gulp.task('assets', function () {
+  console.log('Compiling assets...')
   gulp
     .src('assets/*')
     .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('scripts', function () {
+  console.log('Compiling scripts...')
   browserify('./src/index.js', {debug: true})
-    .transform(babel)
+    .transform(babel, {presets: ['es2015'], plugins: ['syntax-async-functions', 'transform-regenerator']})
     .bundle()
     .on('error', function (err){
       console.log(err);
