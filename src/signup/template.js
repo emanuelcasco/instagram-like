@@ -28,7 +28,6 @@ var signupBox = yo`
       ${translate('signup.account')} <a href="/signin">${translate('signin')}</a>
     </div>
   </div>
-</div>
-`
+</div>`
 
 module.exports = landing(signupBox);

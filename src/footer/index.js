@@ -25,5 +25,4 @@ function changeLang(locale){
   return false;
 }
 
-
 document.body.appendChild(el);
