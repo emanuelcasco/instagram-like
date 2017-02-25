@@ -4,8 +4,8 @@
   "description": "Share your photos studing",
   "main": "server.js",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp & node server.js"
+    "build": "gulp",
+    "start": "gulp build & gulp watch & node server.js"
   },
   "keywords": [
     "emanuel",
@@ -21,6 +21,7 @@
     "page": "^1.7.1",
     "pug": "^2.0.0-beta11",
     "pug-loader": "^2.3.0",
+    "superagent": "^3.5.0",
     "yo-yo": "^1.4.0"
   },
   "devDependencies": {

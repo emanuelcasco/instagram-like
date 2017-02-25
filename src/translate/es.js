@@ -1,6 +1,6 @@
 module.exports = {
   'likes':             "{likes, number} me gusta",
-  'my-profile':        'Mi perfil',
+  'my-profile':        'Perfil',
   'logout':            'Salir',
   'login':             'Iniciar sesión',
   'language':          'Idioma',

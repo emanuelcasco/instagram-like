@@ -3,7 +3,7 @@ module.exports = {
           '=0 { no likes }' +
           '=1 { # like }' +
           'other { # likes }}',
-  'my-profile':         'My profile',
+  'my-profile':        'Profile',
   'logout':            'Logout',
   'login':             'Login',
   'language':          'Language',
