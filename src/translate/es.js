@@ -3,6 +3,7 @@ module.exports = {
   'my-profile':        'Mi perfil',
   'logout':            'Salir',
   'login':             'Iniciar sesión',
+  'language':          'Idioma',
   'english':           'Inglés',
   'spanish':           'Español',
   'signup.subheading': 'Registrate para ver fotos de tus amigos estudiando duro',

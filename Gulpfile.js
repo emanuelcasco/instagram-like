@@ -32,7 +32,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('default', ['styles', 'assets', 'scripts']);
+gulp.task('build', ['styles', 'assets', 'scripts']);
 
 gulp.task('watch', [], () => {
     console.log('Watching over your project...')
@@ -41,3 +41,5 @@ gulp.task('watch', [], () => {
                  console.log(`Event ${event.type} ended`)
     });
 });
+
+gulp.task('default', ['styles', 'assets', 'scripts']);

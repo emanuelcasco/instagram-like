@@ -12,18 +12,18 @@ page('/homepage', function (ctx, next) {
         avatar: 'http://www.templatedeck.com/demos/slick_html/img/blogger.jpg'
       },
       url: 'http://materializecss.com/images/office.jpg',
-      likes: 1024,
+      likes: 4,
       liked: true,
       createdAt: new Date('2017-02-24T23:12:00Z')
     },
     {
       user: {
-        username: 'hellmet',
+        username: 'hellmet2',
         name: 'Guadalupe Escobar',
         avatar: 'http://materializecss.com/images/yuna.jpg'
       },
       url: 'http://materializecss.com/images/sample-1.jpg',
-      likes: 1,
+      likes: 7,
       liked: false,
       createdAt: new Date()
     }

@@ -41,9 +41,9 @@ body{
   margin-bottom: 10px;
   .fa{ color: #333; }
   .btn{ height: 100%; }
-  li a { color: $primary-color; }
   #drop-user{width: 150px;}
 }
+li a { color: $primary-color !important; }
 
 .site-footer {
   text-transform: uppercase;
