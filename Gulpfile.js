@@ -25,7 +25,7 @@ gulp.task('assets', function () {
 gulp.task('scripts', function () {
   console.log('Compiling scripts...')
   browserify('./src/index.js', {debug: true})
-    .transform(babel)
+    .transform(babel, {presets: ['es2015'], plugins: ['syntax-async-functions', 'transform-regenerator']})
     .bundle()
     .on('error', function (err){
       console.log(err);
