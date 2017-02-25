@@ -6,6 +6,7 @@ module.exports = {
   'my-profile':         'My profile',
   'logout':            'Logout',
   'login':             'Login',
+  'language':          'Language',
   'english':           'English',
   'spanish':           'Spanish',
   'signup.subheading': 'Sign up to watch your friends pictures studying hard',

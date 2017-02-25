@@ -34,6 +34,6 @@
     "watchify": "^3.9.0"
   }, "scripts":{
     "build": "gulp",
-    "start": "gulp watch & node server.js"
+    "start": "gulp build & gulp watch & node server.js"
   }
 }
