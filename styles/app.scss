@@ -47,7 +47,7 @@ body{
   margin-bottom: 10px;
   .fa{ color: #333; }
   .btn{ height: 100%; }
-  #drop-user{width: 150px;}
+  #drop-user{ width: 200px !important; }
 }
 li a { color: $primary-color !important; }
 
@@ -117,4 +117,27 @@ li a { color: $primary-color !important; }
 .btn.btn-blue {
   background-color: $primary-color;
   &:hover { background-color: $secondary-color; }
+}
+
+.form-upload {
+  span, button { color: white; }
+  .fileUpload {
+    background-color: $primary-color;
+    &:hover { background-color: $secondary-color; }
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+  }
 }

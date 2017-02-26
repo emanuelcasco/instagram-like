@@ -14,7 +14,7 @@ module.exports = function pictureCard(pic) {
             <img src="${picture.user.avatar}" class="avatar"/>
             <span class="username">${picture.user.name}</span>
           </a>
-          <small class="right time">${translate.date.format(new Date(picture.createdAt))}</small>
+          <small class="right time">${translate.date.format(picture.createdAt)}</small>
           <p class=" valign-wrapper">
             <a class="left" href="#" onclick=${like}><i class="fa fa-heart-o" aria-hidden="true"></i></a>
             <a class="left" href="#" onclick=${like}><i class="fa fa-heart" aria-hidden="true"></i></a>
