@@ -3,7 +3,8 @@ module.exports = {
           '=0 { no likes }' +
           '=1 { # like }' +
           'other { # likes }}',
-  'my-profile':         'My profile',
+  'home':              'Home',
+  'my-profile':        'Profile',
   'logout':            'Logout',
   'login':             'Login',
   'language':          'Language',
@@ -20,5 +21,9 @@ module.exports = {
   'signin':            'Login',
   'signup':            'Signup',
   'signin.account':    'Don\'t have an account?',
-  'language':          'Language'
+  'language':          'Language',
+  'upload-picture':    'Upload photo',
+  'upload':            'Upload!',
+  'upload-success':    'Photo uploaded successfully!',
+  'cancel':            'Cancel'
 }

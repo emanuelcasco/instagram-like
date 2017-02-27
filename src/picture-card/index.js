@@ -3,7 +3,6 @@ var translate = require('../translate');
 
 module.exports = function pictureCard(pic) {
   var elem;
-
   function render(picture) {
     return yo`
     <div class="card ${ picture.liked ? 'liked' : '' }">
@@ -11,7 +10,7 @@ module.exports = function pictureCard(pic) {
           <img class="activator" src="${picture.url}">
         </div>
         <div class="card-content">
-          <a href="/users/${picture.user.username}" class="card-title">
+          <a href="/${picture.user.username}" class="card-title">
             <img src="${picture.user.avatar}" class="avatar"/>
             <span class="username">${picture.user.name}</span>
           </a>
@@ -22,8 +21,7 @@ module.exports = function pictureCard(pic) {
             <span class="left likes">${translate.message('likes', {likes: picture.likes})}</span>
           </p>
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
   function like(){
@@ -33,7 +31,7 @@ module.exports = function pictureCard(pic) {
     yo.update(elem, newElem);
     return false;
   }
-  
+
   elem = render(pic);
 
   return elem;
