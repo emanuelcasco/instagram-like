@@ -18,5 +18,9 @@ module.exports = {
   'signin':            'Iniciar sesión',
   'signup':            'Registrarse',
   'signin.account':    '¿No tienes una cuenta?',
-  'language':          'Idioma'
+  'language':          'Idioma',
+  'upload-picture':    'Subir foto',
+  'upload':            '¡Subir!',
+  'upload-success':     '¡Foto subida exitosamente!',
+  'cancel':            'Cancelar'
 }
