@@ -13,5 +13,6 @@ module.exports = function(pictures){
       </div>
     </div>
   </div>`;
+  
   return layout(template);
 }
