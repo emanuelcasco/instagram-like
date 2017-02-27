@@ -29,11 +29,6 @@ app.get('/signin', function(req, res) {
   res.render('index');
 });
 
-<<<<<<< HEAD
-app.listen(3000, function (err) {
-    if(err) return console.log('Hubo un error'), process.exit(1);
-    console.log("Escuchando en el puerto 3000");
-=======
 app.get('/api/pictures', function(req, res, next) {
   var pictures = [
     {
@@ -84,5 +79,4 @@ app.post('/api/pictures', function(req, res){
 app.listen(3000, function (err) {
   if(err) return console.log('Hubo un error'), process.exit(1);
   console.log("Escuchando en el puerto 3000");
->>>>>>> a1d1df57684307bb9249aa30eebfbc141593fb46
 });

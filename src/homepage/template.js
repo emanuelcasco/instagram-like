@@ -28,10 +28,6 @@ module.exports = function(pictures){
       </div>
     </div>
   </div>`;
-<<<<<<< HEAD
-  
-  return layout(template);
-=======
 
   function onsubmit(ev) {
     ev.preventDefault();
@@ -66,5 +62,4 @@ module.exports = function(pictures){
   }
 
   return layout(elem);
->>>>>>> a1d1df57684307bb9249aa30eebfbc141593fb46
 }
