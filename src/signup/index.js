@@ -5,4 +5,6 @@ page('/signup', function (ctx, next) {
   $('title').html('Emagram - Registrarse');
   var main = $('#main-container');
   main.empty().append(template);
+  var header = $('#header-container');
+  header.empty();
 })

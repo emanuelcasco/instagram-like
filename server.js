@@ -29,6 +29,10 @@ app.get('/signin', function(req, res) {
   res.render('index');
 });
 
+app.get('/:username', function(req, res) {
+  res.render('index');
+});
+
 app.get('/api/pictures', function(req, res, next) {
   var pictures = [
     {
@@ -65,8 +69,21 @@ app.get('/api/pictures', function(req, res, next) {
       createdAt: new Date().setDate(new Date().getDate() - 10)
     }
   ];
+  setTimeout(() => res.send(pictures), 5000);
+});
 
-  res.send(pictures);
+app.get('/api/user/:username', function (req, res){
+  const user = {
+    username:'hellmet',
+    avatar:'http://materializecss.com/images/yuna.jpg',
+    pictures: [
+      {id: 1, likes:10, src:'http://lorempixel.com/800/400/food/2/'},
+      {id: 2, likes:100, src:'http://lorempixel.com/800/400/food/1/'},
+      {id: 3, likes:1, src:'http://lorempixel.com/800/400/food/3/'},
+      {id: 4, likes:0, src:'http://lorempixel.com/800/400/food/4/'}
+    ]
+  };
+  res.send(user);
 });
 
 app.post('/api/pictures', function(req, res){

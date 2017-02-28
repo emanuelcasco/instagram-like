@@ -1,11 +1,11 @@
 var page = require('page');
 var template = require('./template');
 var axios = require('axios');
+var header = require('../header');
 
-page('/', asyncLoadPictures,function (ctx, next) {
+page('/', header, asyncLoadPictures,function (ctx, next) {
   $('title').html('Emagram - Inicio');
   var main = $('#main-container');
-
   main.empty().append(template(ctx.pictures));
 });
 
