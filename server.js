@@ -69,7 +69,7 @@ app.get('/api/pictures', function(req, res, next) {
       createdAt: new Date().setDate(new Date().getDate() - 10)
     }
   ];
-  setTimeout(() => res.send(pictures), 5000);
+  setTimeout(() => res.send(pictures), 2000);
 });
 
 app.get('/api/user/:username', function (req, res){
