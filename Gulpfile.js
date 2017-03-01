@@ -22,6 +22,13 @@ gulp.task('assets', function () {
     .pipe(gulp.dest('./public/'));
 });
 
+gulp.task('fonts', function () {
+  console.log('Compiling fonts...')
+  gulp
+    .src('assets/fonts/*')
+    .pipe(gulp.dest('./public/fonts/'));
+});
+
 gulp.task('scripts', function () {
   console.log('Compiling scripts...')
   browserify('./src/index.js', {debug: true})
@@ -36,7 +43,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('./public/js'));
 });
 
-gulp.task('build', ['styles', 'assets', 'scripts']);
+gulp.task('build', ['styles', 'assets', 'scripts', 'fonts']);
 
 gulp.task('watch', [], () => {
     console.log('Watching over your project...')
@@ -46,4 +53,4 @@ gulp.task('watch', [], () => {
     });
 });
 
-gulp.task('default', ['styles', 'assets', 'scripts']);
+gulp.task('default', ['styles', 'assets', 'scripts', 'fonts']);

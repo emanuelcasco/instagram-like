@@ -33,6 +33,10 @@ app.get('/:username', function(req, res) {
   res.render('index');
 });
 
+app.get('/:username/:id', function(req, res) {
+  res.redirect(`/${req.params.username}`);
+});
+
 app.get('/api/pictures', function(req, res, next) {
   var pictures = [
     {
@@ -83,7 +87,7 @@ app.get('/api/user/:username', function (req, res){
       {id: 4, likes:0, src:'http://lorempixel.com/800/400/food/4/'}
     ]
   };
-  res.send(user);
+  setTimeout(() => res.send(user), 2000);
 });
 
 app.post('/api/pictures', function(req, res){

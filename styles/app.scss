@@ -157,6 +157,7 @@ li a { color: $primary-color !important; }
   .heading {
     margin-bottom: 20px;
   }
+  .avatar { border: $primary-color solid 5px; }
   .picture-container {
     display: flex;
     align-items: center;
@@ -200,5 +201,44 @@ li a { color: $primary-color !important; }
 
 #loader {
   height: 80%;
+  width: 100%;
+}
+
+.modal {
+  z-index: 101;
+
+  img {
+    max-height: 100%;
+    max-width: 90%;
+  }
+
+  .fa-heart {
+    display: inline-block;
+  }
+}
+
+.like-heart {
+  font-size: 10em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  transition: all .1s ease;
+  opacity: 0;
+}
+
+.like-heart.liked {
+  color: red;
+  font-size: 12em;
+  display: block;
+  transition: all .5s ease;
+  opacity: 1;
+}
+
+.smoking {
+  z-index: 100;
+  background-color: #fafafa;
+  height: 100%;
   width: 100%;
 }
