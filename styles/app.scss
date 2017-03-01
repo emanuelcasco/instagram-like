@@ -166,7 +166,7 @@ li a { color: $primary-color !important; }
     position: relative;
     &:hover {
       .picture {
-        @include prefix(filter, blur(5px) grayscale(100%));
+        @include prefix(filter, blur(2px) grayscale(100%));
       }
       .likes {
         display: flex;
