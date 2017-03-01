@@ -9,10 +9,10 @@ var watchify = require('watchify');
 gulp.task('styles', function () {
   console.log('Compiling styles...')
   gulp
-    .src('./styles/app.scss')
+    .src('./styles/*.scss')
     .pipe(sass())
     .pipe(rename('app.css'))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/'));
 })
 
 gulp.task('assets', function () {
@@ -20,13 +20,6 @@ gulp.task('assets', function () {
   gulp
     .src('assets/*')
     .pipe(gulp.dest('./public/'));
-});
-
-gulp.task('fonts', function () {
-  console.log('Compiling fonts...')
-  gulp
-    .src('assets/fonts/*')
-    .pipe(gulp.dest('./public/fonts/'));
 });
 
 gulp.task('scripts', function () {
@@ -39,11 +32,11 @@ gulp.task('scripts', function () {
       this.emit('end');
     })
     .pipe(source('index.js'))
-    .pipe(rename('app.js'))
-    .pipe(gulp.dest('./public/js'));
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('build', ['styles', 'assets', 'scripts', 'fonts']);
+gulp.task('build', ['styles', 'assets', 'scripts']);
 
 gulp.task('watch', [], () => {
     console.log('Watching over your project...')
@@ -53,4 +46,4 @@ gulp.task('watch', [], () => {
     });
 });
 
-gulp.task('default', ['styles', 'assets', 'scripts', 'fonts']);
+gulp.task('default', ['styles', 'assets', 'scripts']);

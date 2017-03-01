@@ -1,30 +1,29 @@
 var yo = require('yo-yo');
 var landing = require('../landing');
-var translate = require('../translate').message;
+var translate = require('../translate');
 
-var signinBox = yo`
-<div class="col s12 m7 center-align">
+var signinForm = yo`<div class="col s12 m7">
   <div class="row">
-    <div>
+    <div class="signup-box">
       <h1 class="emagram">Emagram</h1>
       <form class="signup-form">
         <div class="section">
-          <a class="waves-effect btn btn-fb">${translate('signin.facebook')}<i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <a class="btn btn-fb">${translate.message('signup.facebook')} <i class="fa fa-facebook"></i></a>
         </div>
         <div class="divider"></div>
         <div class="section">
-          <input type="text" name="username" placeholder="${translate('username')}" />
-          <input type="password" name="password" placeholder="${translate('password')}" />
-          <button class="btn waves-effect waves-light btn-blue" type="submit">${translate('login')}</button>
+          <input type="text" name="username" placeholder="${translate.message('username')}" />
+          <input type="password" name="password" placeholder="${translate.message('password')}" />
+          <button class="btn waves-effect waves-light btn-signup" type="submit">${translate.message('signup.text')}</button>
         </div>
       </form>
     </div>
   </div>
   <div class="row">
-    <div class="box">
-      ${translate('signin.account')} <a href="/signup">${translate('signup')}</a>
+    <div class="login-box">
+      ${translate.message('signin.not-have-account')} <a href="/signup">${translate.message('signup.call-to-action')}</a>
     </div>
   </div>
-</div>`
+</div>`;
 
-module.exports = landing(signinBox);
+module.exports = landing(signinForm);

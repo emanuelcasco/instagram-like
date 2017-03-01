@@ -1,4 +1,4 @@
-require("babel-polyfill")
+require('babel-polyfill');
 var page = require('page');
 
 require('./homepage');

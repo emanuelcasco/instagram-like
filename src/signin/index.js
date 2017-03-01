@@ -1,10 +1,10 @@
 var page = require('page');
+var empty = require('empty-element');
 var template = require('./template');
+var title = require('title');
 
 page('/signin', function (ctx, next) {
-  $('title').html('Emagram - Iniciar sesión');
-  var main = $('#main-container');
-  main.empty().append(template);
-  var header = $('#header-container');
-  header.empty();
+  title('Emagram - Signin');
+  var main = document.getElementById('main-container');
+  empty(main).appendChild(template);
 })

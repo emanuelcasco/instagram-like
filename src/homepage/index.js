@@ -1,28 +1,28 @@
 var page = require('page');
+var empty = require('empty-element');
 var template = require('./template');
-var axios = require('axios');
+var title = require('title');
 var header = require('../header');
 var loader = require('../loader');
 
-page('/', header, loading, asyncLoadPictures,function (ctx, next) {
-  $('title').html('Emagram - Inicio');
-  var main = $('#main-container');
-  main.empty().append(template(ctx.pictures));
-});
+page('/', header, loading, asyncLoad, function (ctx, next) {
+  title('Emagram');
+  var main = document.getElementById('main-container');
+  empty(main).appendChild(template(ctx.pictures));
+})
 
-async function asyncLoadPictures(ctx, next) {
-  try{
-    var pictures = fetch('/api/pictures')
-    ctx.pictures = await pictures.then(res => res.json());
-    next();
-  } catch(err) {
-    return console.log(err);
-  }
-}
-
-function loading (ctx, next) {
+function loading(ctx, next) {
   var main = $('#main-container');
   var elem = loader;
   main.empty().append(elem);
   next();
+}
+
+async function asyncLoad(ctx, next) {
+  try {
+    ctx.pictures = await fetch('/api/pictures').then(res => res.json());
+    next();
+  } catch (err) {
+    return console.log(err);
+  }
 }

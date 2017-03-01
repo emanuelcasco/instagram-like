@@ -1,33 +1,32 @@
 var yo = require('yo-yo');
 var landing = require('../landing');
-var translate = require('../translate').message;
+var translate = require('../translate');
 
-var signupBox = yo`
-<div class="col s12 m7 center-align">
+var signupForm = yo`<div class="col s12 m7">
   <div class="row">
-    <div>
+    <div class="signup-box">
       <h1 class="emagram">Emagram</h1>
       <form class="signup-form">
-        <h2>${translate('signup.subheading')}</h2>
+        <h2>${translate.message('signup.subheading')}</h2>
         <div class="section">
-          <a class="waves-effect btn btn-fb">${translate('signin.facebook')}<i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <a class="btn btn-fb">${translate.message('signup.facebook')} <i class="fa fa-facebook"></i></a>
         </div>
         <div class="divider"></div>
         <div class="section">
-          <input type="email" name="email" placeholder="${translate('email')}" />
-          <input type="text" name="name" placeholder="${translate('fullname')}" />
-          <input type="text" name="username" placeholder="${translate('username')}" />
-          <input type="password" name="password" placeholder="${translate('password')}" />
-          <button class="btn waves-effect btn-blue" type="submit">${translate('signup.action')}</button>
+          <input type="email" name="email" placeholder="${translate.message('email')}" />
+          <input type="text" name="name" placeholder="${translate.message('fullname')}" />
+          <input type="text" name="username" placeholder="${translate.message('username')}" />
+          <input type="password" name="password" placeholder="${translate.message('password')}" />
+          <button class="btn waves-effect waves-light btn-signup" type="submit">${translate.message('signup.call-to-action')}</button>
         </div>
       </form>
     </div>
   </div>
   <div class="row">
-    <div class="box">
-      ${translate('signup.account')} <a href="/signin">${translate('signin')}</a>
+    <div class="login-box">
+      ${translate.message('signup.have-account')} <a href="/signin">${translate.message('signin')}</a>
     </div>
   </div>
-</div>`
+</div>`;
 
-module.exports = landing(signupBox);
+module.exports = landing(signupForm);
