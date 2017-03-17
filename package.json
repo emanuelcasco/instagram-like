@@ -41,7 +41,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "start": "gulp build & gulp watch & node server.js"
+    "dev": "gulp build & gulp watch & node server.js",
+    "start": "gulp build & node server.js"
   },
   "engines": {
     "node": "7.7.1",
