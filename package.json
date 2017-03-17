@@ -24,9 +24,7 @@
     "pug": "^2.0.0-alpha6",
     "superagent": "^1.8.3",
     "title": "^1.0.0",
-    "yo-yo": "^1.2.0"
-  },
-  "devDependencies": {
+    "yo-yo": "^1.2.0",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-regenerator": "^6.6.5",
     "babel-polyfill": "^6.7.4",
