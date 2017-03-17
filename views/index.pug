@@ -1,6 +1,7 @@
 doctype html
 html
   head
+    meta(charset='utf-8')
     link(rel='stylesheet' type='text/css' href='/app.css')
     link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script')
     link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
@@ -8,11 +9,11 @@ html
     link(rel="shortcut icon" type="image/x-icon" href="apple-icon-60x60.png")
     meta(name='theme-color', content='#ffffff')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
-    meta(charset='utf-8')
 
   body
     section#header-container
     section#main-container
-    script(src='https://code.jquery.com/jquery-2.2.3.min.js', integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
+      
+    script(type='application/javascript' src='https://code.jquery.com/jquery-2.2.3.min.js', integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin='anonymous')
+    script(type='application/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
     script(type='application/javascript' src='/bundle.js')
