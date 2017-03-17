@@ -12,7 +12,7 @@ gulp.task('styles', function () {
     .src('./styles/*.scss')
     .pipe(sass())
     .pipe(rename('app.css'))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/css'));
 })
 
 gulp.task('assets', function () {
@@ -33,7 +33,7 @@ gulp.task('scripts', function () {
     })
     .pipe(source('index.js'))
     .pipe(rename('bundle.js'))
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('build', ['styles', 'assets', 'scripts']);
