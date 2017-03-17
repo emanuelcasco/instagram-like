@@ -35,7 +35,8 @@ app.get('/api/pictures', function (req, res, next) {
   var pictures = [
     {
       user: {
-        username: '@emanuelc',
+        username: 'emanuelc',
+        name: 'Emanuel Casco',
         avatar: 'https://static.platzi.com/media/public/uploads/Sinti%CC%81tulo-dfb74540-94b9-4955-b43d-65ebf066745e.png'
       },
       url: 'https://scontent.faep3-1.fna.fbcdn.net/v/t1.0-9/12032183_614236032063399_3402427457964980260_n.jpg?oh=a67d5cc1d0949822166f4c4cd2344a71&oe=5942E17F',
@@ -45,7 +46,8 @@ app.get('/api/pictures', function (req, res, next) {
     },
     {
       user: {
-        username: '@emanuelc',
+        username: 'emanuelc',
+        name: 'Emanuel Casco',
         avatar: 'https://static.platzi.com/media/public/uploads/Sinti%CC%81tulo-dfb74540-94b9-4955-b43d-65ebf066745e.png'
       },
       url: 'office.jpg',

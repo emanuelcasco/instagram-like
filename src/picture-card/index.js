@@ -13,7 +13,7 @@ module.exports = function pictureCard(pic) {
       <div class="card-content">
         <a href="/${picture.user.username}" class="card-title">
           <img src="${picture.user.avatar}" class="avatar" />
-          <span class="username">${picture.user.username}</span>
+          <span class="username">${picture.user.name}</span>
         </a>
         <small class="right time">${translate.date.format(picture.createdAt)}</small>
         <p>
@@ -35,7 +35,7 @@ module.exports = function pictureCard(pic) {
       pic.likedHeart = false;
       var newEl = render(pic);
       yo.update(el, newEl);
-    }, 2500)
+    }, 2000)
 
     return false;
   }
