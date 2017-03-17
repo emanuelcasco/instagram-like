@@ -11,7 +11,7 @@ var storage = multer.diskStorage({
   }
 })
 
-var port = (process.env.PORT || 8000);
+var port = (process.env.PORT || 3000);
 
 var upload = multer({ storage: storage }).single('picture');
 
@@ -119,6 +119,5 @@ app.get('/:username/:id', function (req, res) {
 
 app.listen(port, function (err) {
   if (err) return console.log('Hubo un error'), process.exit(1);
-
-  console.log('Emagram escuchando en el puerto ' + port);
+  console.log(`Emagram escuchando en el puerto ${port}`);
 })
