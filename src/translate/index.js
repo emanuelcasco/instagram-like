@@ -23,7 +23,7 @@ module.exports = {
   message: function (text, opts) {
     opts = opts || {};
     var msg = new IntlMessageFormat(MESSAGES[locale][text], locale, null);
-    return msg.format(opts); 
+    return msg.format(opts);
   },
   date: new IntlRelativeFormat(locale)
 }
