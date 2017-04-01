@@ -1,13 +1,24 @@
 var express = require('express');
 var multer  = require('multer');
 var ext = require('file-extension');
+var aws = require('aws-sdk');
+var multerS3 = require('multer-s3');
+var config = require('./config');
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, './uploads')
+var s3 = new aws.S3({
+  accessKeyId: config.aws.accessKey,
+  secretAccessKey: config.aws.secretKey
+});
+
+var storage = multerS3({
+  s3: s3,
+  bucket: 'emagram-s3',
+  acl: 'public-read',
+  metadata: function (req, file, cb) {
+    cb(null, { fieldName: file.fieldname });
   },
-  filename: function (req, file, cb) {
-    cb(null, +Date.now() + '.' + ext(file.originalname))
+  key: function (req, file, cb) {
+    cb(null, +Date.now() + '.' + ext(file.originalname));
   }
 })
 
@@ -65,9 +76,11 @@ app.get('/api/pictures', function (req, res, next) {
 app.post('/api/pictures', function (req, res) {
   upload(req, res, function (err) {
     if (err) {
-      return res.send(500, "Error uploading file");
+      console.log(err);
+      return res.send(500, err);
+    } else {
+      res.send('File uploaded');
     }
-    res.send('File uploaded');
   })
 })
 

@@ -6,7 +6,7 @@ module.exports = {
   'logout':                   'Logout',
   'english':                  'English',
   'spanish':                  'Spanish',
-  'signup.subheading':        'Signup to watch your friends\' pictures studying at Platzi',
+  'signup.subheading':        'Signup to watch your friends\' pictures studying',
   'signup.facebook':          'Signup with',
   'signup.text':              'Signup',
   'email':                    'Email',

@@ -3,7 +3,7 @@ module.exports = {
   'logout':                   'Salir',
   'english':                  'Inglés',
   'spanish':                  'Español',
-  'signup.subheading':        'Regístrate para ver fotos de tus amigos estudiando en Platzi',
+  'signup.subheading':        'Regístrate para ver fotos de tus amigos estudiando',
   'signup.facebook':          'Iniciar sesión con',
   'signup.text':              'Iniciar sesión',
   'email':                    'Correo electrónico',
